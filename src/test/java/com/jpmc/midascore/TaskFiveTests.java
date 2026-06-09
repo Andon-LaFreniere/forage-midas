@@ -12,9 +12,7 @@ import org.springframework.test.annotation.DirtiesContext;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @DirtiesContext
-@Disabled("Manual task verifier; run individually for debugging")
-@EmbeddedKafka(partitions = 1, brokerProperties = {"listeners=PLAINTEXT://localhost:9092", "port=9092"})
-public class TaskFiveTests {
+@EmbeddedKafka(partitions = 1, brokerProperties = { "listeners=PLAINTEXT://localhost:9092", "port=9092" })@org.springframework.context.annotation.ComponentScan(basePackages = {"com.jpmc.midascore"})public class TaskFiveTests {
     static final Logger logger = LoggerFactory.getLogger(TaskFiveTests.class);
 
     @Autowired
@@ -28,7 +26,6 @@ public class TaskFiveTests {
 
     @Autowired
     private BalanceQuerier balanceQuerier;
-
 
     @Test
     void task_five_verifier() throws InterruptedException {

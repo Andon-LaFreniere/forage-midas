@@ -7,8 +7,17 @@ public class Transaction {
     private long senderId;
     private long recipientId;
     private float amount;
+    private float incentive;
 
     public Transaction() {
+    }
+
+    public float getIncentive() {
+        return incentive;
+    }
+
+    public void setIncentive(float incentive) {
+        this.incentive = incentive;
     }
 
     public Transaction(long senderId, long recipientId, float amount) {
