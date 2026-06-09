@@ -12,7 +12,9 @@ import org.springframework.test.annotation.DirtiesContext;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @DirtiesContext
-@EmbeddedKafka(partitions = 1, brokerProperties = { "listeners=PLAINTEXT://localhost:9092", "port=9092" })@org.springframework.context.annotation.ComponentScan(basePackages = {"com.jpmc.midascore"})public class TaskFiveTests {
+@EmbeddedKafka(partitions = 1, brokerProperties = { "listeners=PLAINTEXT://localhost:9092", "port=9092" })
+@org.springframework.context.annotation.ComponentScan(basePackages = { "com.jpmc.midascore" })
+public class TaskFiveTests {
     static final Logger logger = LoggerFactory.getLogger(TaskFiveTests.class);
 
     @Autowired
